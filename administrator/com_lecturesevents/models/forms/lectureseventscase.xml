@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <fieldset addfieldpath="/administrator/components/com_lecturesevents/models/fields">
+
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" required="true" readonly="true" class="readonly" />
+
+        <field name="textonly" type="hidden" default="0" label="COM_LECTURESEVENTS_FIELD_TEXTONLY_LABEL"  readonly="true" class="readonly" />
+
+        <field name="title" type="text" class="inputbox" size="40" label="COM_LECTURESEVENTS_FIELD_TITLE_LABEL" description="COM_LECTURESEVENTS_FIELD_TITLE_DESC"  required="true" />
+        
+        <field name="alias" type="text" class="inputbox" size="40" label="COM_LECTURESEVENTS_FIELD_ALIAS_LABEL" description="COM_LECTURESEVENTS_FIELD_ALIAS_DESC" />
+        
+        <field name="catid" type="lectureseventscategory" label="COM_LECTURESEVENTS_FIELD_CATEGORY_LABEL" description="COM_LECTURESEVENTS_FIELD_CATEGORY_DESC" class="inputbox" required="true" />
+
+        <field name="ordering" type="LecturesEventsOrdering" table="case" class="inputbox" label="COM_LECTURESEVENTS_FIELD_ORDERING_LABEL" description="COM_LECTURESEVENTS_FIELD_ORDERING_DESC" />
+
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="JFIELD_ACCESS_DESC" class="inputbox" size="1" />
+
+        <field name="unit" type="text" class="inputbox" size="20" label="COM_LECTURESEVENTS_FIELD_UNIT_LABEL" description="COM_LECTURESEVENTS_FIELD_UNIT_DESC" />
+        
+        <field name="locid" type="lectureseventslocs" label="COM_LECTURESEVENTS_FIELD_LOCATION_LABEL" description="COM_LECTURESEVENTS_FIELD_LOCATION_DESC" class="inputbox" />
+        
+        <field name="type" type="radio" default="1" label="COM_LECTURESEVENTS_FIELD_TYPE_LABEL" description="COM_LECTURESEVENTS_FIELD_TYPE_DESC">
+            <option value="1">COM_LECTURESEVENTS_OPTION_EVENT</option>
+            <option value="2">COM_LECTURESEVENTS_OPTION_LECTURE</option>
+        </field>
+                
+        <field name="color" type="lectureseventscolors" default="" label="COM_LECTURESEVENTS_FIELD_COLOR_LABEL" description="COM_LECTURESEVENTS_FIELD_COLOR_DESC" />
+       
+        <field name="register_link" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_REGISTER_LINK_LABEL" description="COM_LECTURESEVENTS_FIELD_REGISTER_LINK_DESC" />
+         
+        <field name="image" type="media" directory="images" hide_none="1" size="40" label="COM_LECTURESEVENTS_FIELD_IMAGE_LABEL" description="COM_LECTURESEVENTS_FIELD_IMAGE_DESC" />
+        
+        <field name="thumbnail" type="media" directory="images" hide_none="1" size="40" label="COM_LECTURESEVENTS_FIELD_THUMNAIL_LABEL" description="COM_LECTURESEVENTS_FIELD_THUMNAIL_DESC" />
+        
+        <field name="filename" type="lectselectfilename" manager="file" label="COM_LECTURESEVENTS_FIELD_FILENAME_LABEL" description="COM_LECTURESEVENTS_FIELD_FILENAME_DESC" class="inputbox" size="40" />
+        
+        <field name="form_lecture_event" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_LECTURE_EVENT_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_LECTURE_EVENT_DESC" />
+        
+        <field name="form_date_up" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_DATE_UP_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_DATE_UP_DESC" />
+        
+        <field name="form_date_down" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_DATE_DOWN_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_DATE_DOWN_DESC" />
+            
+        <field name="form_workload" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_WORKLOAD_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_WORKLOAD_DESC" />
+        
+        <field name="form_location" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_LOCATION_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_LOCATION_DESC" />
+                
+        <field name="form_speaker" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_SPEAKER_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_SPEAKER_DESC" />
+        
+        <field name="form_audience" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_AUDIENCE_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_AUDIENCE_DESC" />
+    
+        <field name="form_investment" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_INVESTIMENT_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_INVESTIMENT_DESC" />
+        
+        <field name="form_link" type="text" class="inputbox" size="100" label="COM_LECTURESEVENTS_FIELD_FORM_LINK_LABEL" description="COM_LECTURESEVENTS_FIELD_FORM_LINK_DESC" />
+        
+        <field name="form_content_1" type="editor" buttons="true" hide="pagebreak,readmore" class="inputbox" label="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_1_LABEL" filter="safehtml" description="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_1_DESC" />
+        
+        <field name="form_content_2" type="editor" buttons="true" hide="pagebreak,readmore" class="inputbox" label="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_2_LABEL" filter="safehtml" description="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_2_DESC" />
+        
+        <field name="form_content_3" type="editor" buttons="true" hide="pagebreak,readmore" class="inputbox" label="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_3_LABEL" filter="safehtml" description="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_3_DESC" />
+        
+        <field name="form_content_4" type="editor" buttons="true" hide="pagebreak,readmore" class="inputbox" label="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_4_LABEL" filter="safehtml" description="COM_LECTURESEVENTS_FIELD_FORM_CONTENT_4_DESC" />
+        
+        <field name="description" type="editor" buttons="true" hide="pagebreak,readmore" class="inputbox" label="COM_LECTURESEVENTS_FIELD_DESCRIPTION_LABEL" filter="safehtml" description="COM_LECTURESEVENTS_FIELD_DESCRIPTION_DESC" />	
+        
+        <field name="metakey" type="textarea"
+            label="JField_Meta_Keywords_Label" description="JField_Meta_Keywords_Desc"
+            class="inputbox" rows="3" cols="30" />
+
+        <field name="metadesc" type="textarea"
+            label="JField_Meta_Description_Label" description="JField_Meta_Description_Desc"
+            class="inputbox" rows="3" cols="30" />	
+	
+    </fieldset>
+    
+    
+    
+    <fieldset name="publish" label="COM_LECTURESEVENTS_GROUP_LABEL_PUBLISHING_DETAILS" >
+
+        <field name="published" type="list" label="COM_LECTURESEVENTS_FIELD_PUBLISHED_LABEL" description="COM_LECTURESEVENTS_FIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option	value="0">JUNPUBLISHED</option>
+        </field>
+
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" description="COM_LECTURESEVENTS_FIELD_LANGUAGE_FILE_DESC" class="inputbox">
+            <option value="*">JALL</option>
+        </field>
+
+        <field name="date" type="Calendar" class="inputbox" label="COM_LECTURESEVENTS_FIELD_DATE_LABEL" description="COM_LECTURESEVENTS_FIELD_DATE_DESC" format="%Y-%m-%d %H:%M:%S" size="20" filter="user_utc" />
+
+        <field name="publish_up" type="Calendar" class="inputbox" label="COM_LECTURESEVENTS_FIELD_START_PUBLISHING_LABEL" description="COM_LECTURESEVENTS_FIELD_START_PUBLISHING_DESC" format="%Y-%m-%d %H:%M:%S" size="20" filter="user_utc" />
+        <field name="publish_down" type="Calendar" class="inputbox" label="COM_LECTURESEVENTS_FIELD_FINISH_PUBLISHING_LABEL" description="COM_LECTURESEVENTS_FIELD_FINISH_PUBLISHING_DESC" format="%Y-%m-%d %H:%M:%S" size="20" filter="user_utc" />
+        <field name="register_closed" type="Calendar" class="inputbox" label="COM_LECTURESEVENTS_FIELD_REGISTER_CLOSED_LABEL" description="COM_LECTURESEVENTS_FIELD_REGISTER_CLOSED_DESC" format="%Y-%m-%d %H:%M:%S" size="20" filter="user_utc" />
+        
+    </fieldset>
+	
+    <fields name="metadata">
+        <fieldset name="metadata" label="JGLOBAL_FIELDSET_METADATA_OPTIONS">
+
+	
+            <field name="robots" type="list"
+               label="JField_Metadata_Robots_Label" description="JField_Metadata_Robots_Desc"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JGLOBAL_INDEX_FOLLOW</option>
+                <option value="1">JGLOBAL_NOINDEX_FOLLOW</option>
+                <option value="2">JGLOBAL_INDEX_NOFOLLOW</option>
+                <option value="3">JGLOBAL_NOINDEX_NOFOLLOW</option>
+                <option value="4">JGLOBAL_NO_ROBOTS_TAG</option>
+            </field>
+
+            <field name="author" type="text" label="JAUTHOR"
+               description="JField_Metadata_Author_Desc" size="20" />
+
+            <field name="rights" type="text"
+               label="JFIELD_META_RIGHTS_LABEL" description="JFIELD_META_RIGHTS_DESC"
+               required="" filter="string" cols="30" rows="2" />
+        </fieldset>
+    </fields>
+	
+</form>

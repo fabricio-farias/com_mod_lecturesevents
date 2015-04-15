@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_LECTURESEVENTS_EVENTS_LIST_LAYOUT">
+        <message>
+			<![CDATA[COM_LECTURESEVENTS_EVENTS_LIST_LAYOUT_DESC]]>
+        </message>
+    </layout>
+	
+    <name>COM_LECTURESEVENTS_EVENTS_LIST_LAYOUT</name>
+    <description>COM_LECTURESEVENTS_EVENTS_LIST_LAYOUT_DESC</description>
+    
+    <fields name="params">
+        <fieldset name="basic" addfieldpath="/administrator/components/com_lecturesevents/models/fields" >
+            
+            <field name="locid" type="LecturesEventsLocs" section="com_lecturesevents" default="0" label="COM_LECTURESEVENTS_FIELD_LOCATION_LABEL" description="COM_LECTURESEVENTS_SELECT_LOCATION" required="true" />
+            
+            <field name="catid" type="LecturesEventsCategory" section="com_lecturesevents" default="0" label="COM_LECTURESEVENTS_FIELD_SELECT_CATEGORY_LABEL" description="COM_LECTURESEVENTS_FIELD_SELECT_CATEGORY_DESC" required="true" />
+            
+            <field name="type" type="radio" label="MOD_LECTURESEVENTS_FIELD_TYPE_LABEL" description="MOD_LECTURESEVENTS_FIELD_TYPE_DESC" default="">
+                    <option value="1">MOD_LECTURESEVENTS_CASE</option>
+                    <option value="2">MOD_LECTURESEVENTS_LECTURE</option>
+            </field>
+            
+            <field name="ordering" type="list" label="MOD_LECTURESEVENTS_ORDERING_LABEL" description="MOD_LECTURESEVENTS_ORDERING_DESC" default="ASC">
+                <option value="ASC">JASC</option>
+                <option value="DESC">JDESC</option>
+            </field>
+
+		
+            <field name="show_pagination" type="radio" default="1" label="COM_LECTURESEVENTS_FIELD_SHOW_PAGINATION_LABEL" description="COM_LECTURESEVENTS_FIELD_SHOW_PAGINATION_DESC">
+                <option value="0">COM_LECTURESEVENTS_HIDE</option>
+                <option value="1">COM_LECTURESEVENTS_DISPLAY</option>
+            </field>
+			
+            <field name="show_pagination_limit" type="radio" default="1" label="COM_LECTURESEVENTS_FIELD_SHOW_PAGINATION_LIMIT_LABEL" description="COM_LECTURESEVENTS_FIELD_SHOW_PAGINATION_LIMIT_DESC">
+                <option value="0">COM_LECTURESEVENTS_HIDE</option>
+                <option value="1">COM_LECTURESEVENTS_DISPLAY</option>
+            </field>
+			
+			
+        </fieldset>
+    </fields>
+
+</metadata>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>mod_lecturesevents</name>
+	<author>Fabricio Farias</author>
+	<creationDate>September 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>fabriciorelicario@gmail.com</authorEmail>
+	<authorUrl>www.isgh.org.br</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_LECTURESEVENTS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_lecturesevents">mod_lecturesevents.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_lecturesevents.ini</language>
+		<language tag="en-GB">en-GB.mod_lecturesevents.sys.ini</language>
+		<language tag="pt-BR">pt-BR.mod_lecturesevents.ini</language>
+		<language tag="pt-BR">pt-BR.mod_lecturesevents.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LECTURESEVENTS_HTML" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_lecturesevents/models/fields">
+        
+                                <field name="category"
+                                       type="lectureseventscategory"
+                                       section="com_lecturesevents"
+                                       default="0"
+                                       label="JCATEGORY"
+                                       description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC"
+                                       multiple="true"
+                                       size="5"/>
+        
+<!--                                <field name="category"
+                                       show_root="true"
+                                       type="sql"
+                                       multiple="true"
+                                        size="10"
+                                        label="JCATEGORY"
+                                        description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC"
+                                        query="SELECT id AS value, title FROM #__lecturesevents_categories"
+                                        key_field="value" value_field="title"/>-->
+                                <field
+					name="type"
+					type="list"
+					label="MOD_LECTURESEVENTS_FIELD_TYPE_LABEL"
+					description="MOD_LECTURESEVENTS_FIELD_TYPE_DESC"
+					default="">
+					<option
+						value="">MOD_LECT_LECT_ALL</option>
+					<option
+						value="1">MOD_LECTURESEVENTS_CASE</option>
+					<option
+						value="2">MOD_LECTURESEVENTS_LECTURE</option>
+				</field>
+                                <field name="ordering"
+                                        type="list"
+                                        label="MOD_LECTURESEVENTS_ORDERING_LABEL"
+                                        description="MOD_LECTURESEVENTS_ORDERING_DESC"
+                                        default="ASC">
+                                    <option value="ASC">JASC</option>
+                                    <option value="DESC">JDESC</option>
+                                     
+                                </field>
+				<field
+					name="prepare_content"
+					type="radio"
+					label="MOD_LECTURESEVENTS_FIELD_PREPARE_CONTENT_LABEL"
+					description="MOD_LECTURESEVENTS_FIELD_PREPARE_CONTENT_DESC"
+					default="0">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+				<field name="backgroundimage" type="media"
+					label="MOD_LECTURESEVENTS_FIELD_BACKGROUNDIMAGE_LABEL" description="MOD_BACKGROUNDIMAGE_FIELD_LOGO_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,10 @@
+.checklist.checklist-color{
+    float: left;
+}
+.checklist.checklist-color > li {
+    display: flex;
+    width: 1px;
+}
+.checklist.checklist-color > li > label{
+    
+}
